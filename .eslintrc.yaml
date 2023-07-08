@@ -1,0 +1,45 @@
+---
+env:
+  browser: true
+  commonjs: true
+  es2022: true
+plugins:
+  - "@typescript-eslint"
+  - "unicorn"
+  - "prettier"
+  - "jsdoc"
+  - "jest"
+extends:
+  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
+  - "plugin:unicorn/recommended"
+  - "plugin:import/recommended"
+  - "airbnb-base"
+  - "airbnb-typescript/base"
+  - "prettier"
+  - "plugin:jsdoc/recommended-typescript-error"
+  - "plugin:jest/recommended"
+  - "plugin:jest/style"
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: "latest"
+  project:
+    - "./tsconfig.eslint.json"
+rules:
+  prettier/prettier: "error"
+  no-restricted-syntax: 0
+  "@typescript-eslint/no-use-before-define": "off"
+  "@typescript-eslint/explicit-function-return-type": "error"
+  jsdoc/require-description-complete-sentence: "error"
+  jsdoc/require-hyphen-before-param-description: "error"
+  jsdoc/require-description: "error"
+  jsdoc/check-indentation: "error"
+  jsdoc/require-jsdoc:
+    - "error"
+    - require:
+        FunctionDeclaration: true
+        MethodDefinition: true
+        ClassDeclaration: true
+        ClassExpression: true
+
+...
