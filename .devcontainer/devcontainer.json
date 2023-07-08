@@ -1,0 +1,24 @@
+{
+	"name": "Debian container with Python and Node.JS",
+	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
+	"features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+		"ghcr.io/devcontainers/features/node:1": {
+      "version": "18.16.0"
+    },
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11.4"
+    }
+	},
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "customizations": {
+		"vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "shardulm94.trailing-spaces",
+        "oderwat.indent-rainbow",
+        "davidanson.vscode-markdownlint"
+      ]
+		}
+	}
+}
