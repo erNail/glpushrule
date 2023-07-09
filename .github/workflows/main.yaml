@@ -1,0 +1,76 @@
+---
+name: "Main"
+
+"on": "push"
+
+jobs:
+  node-job:
+    runs-on: "ubuntu-22.04"
+    strategy:
+      matrix:
+        command:
+          - "lint"
+          - "test"
+          - "build"
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v3.5.3"
+      - name: "Set up node and yarn"
+        uses: "actions/setup-node@v3.7.0"
+        with:
+          node-version: "18.16.1"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
+      - name: "Install node dependencies"
+        run: "yarn install"
+      - name: "Run yarn '${{ matrix.command }}'"
+        run: "yarn run ${{ matrix.command }}"
+
+  pre-commit-job:
+    runs-on: "ubuntu-22.04"
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v3.5.3"
+      - name: "Set up python and pip cache"
+        uses: "actions/setup-python@v4.6.1"
+        with:
+          python-version: "3.11.4"
+          cache: "pip"
+      - name: "Install python dependencies"
+        run: "pip install -r requirements.txt"
+      - name: "Set up pre-commit cache"
+        uses: "actions/cache@v3.3.1"
+        with:
+          path: "~/.cache/pre-commit"
+          key: "pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}"
+      - name: "Run pre-commit"
+        run: "pre-commit run --all-files --color=always --show-diff-on-failure"
+
+  release-job:
+    needs:
+      - "pre-commit-job"
+      - "node-job"
+    runs-on: "ubuntu-22.04"
+    permissions:
+      contents: "write"
+      issues: "write"
+      pull-requests: "write"
+    steps:
+      - name: "Checkout repository"
+        uses: "actions/checkout@v3.5.3"
+        with:
+          persist-credentials: false
+      - name: "Set up node and yarn"
+        uses: "actions/setup-node@v3.7.0"
+        with:
+          node-version: "18.16.1"
+          cache: "yarn"
+          cache-dependency-path: "yarn.lock"
+      - name: "Install node dependencies"
+        run: "yarn install"
+      - name: "Run semantic-release"
+        env:
+          GITHUB_TOKEN: "${{ secrets.SEMANTIC_RELEASE_TOKEN }}"
+          NPM_TOKEN: "${{ secrets.NPM_TOKEN }}"
+        run: "npx semantic-release"
+...
