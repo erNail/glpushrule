@@ -366,30 +366,30 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.44.0.tgz#961a5903c74139390478bdc808bcde3fc45ab7af"
   integrity sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==
 
-"@gitbeaker/core@^39.6.0":
-  version "39.6.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.6.0.tgz#a880cb70a84df3df08f67129dc60e0bb333e9a75"
-  integrity sha512-+adTulWY1iqgIok81CE5Od5ZZPlHh6P2XQwH3dTBunFWHYWp4yE3JYzl2uu3JO54uc36vRviMp4OP1l5dUhV6w==
+"@gitbeaker/core@^39.7.0":
+  version "39.7.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.7.0.tgz#505905369d10a7d6f4861b3841cae2210c0bceff"
+  integrity sha512-xZRpfUA1CHLZyvTj26PuyyLGnMDO88g9klWDSm5r4rSE+bwpjjyVFhpGlw8dUEYrh0hTM/nnF3UEE33UuoIYvQ==
   dependencies:
-    "@gitbeaker/requester-utils" "^39.6.0"
+    "@gitbeaker/requester-utils" "^39.7.0"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^39.6.0":
-  version "39.6.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.6.0.tgz#b0385758a1bf2838f809885feee526338f91b5d9"
-  integrity sha512-pfMDS/78TwHONFk5gzMJEtLKc24YQov/ZhCCpA+yc1bIkB5GK9Jm1G+pmGVuoKOXbUTbF84iQfkjSzX85bYiVw==
+"@gitbeaker/requester-utils@^39.7.0":
+  version "39.7.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.7.0.tgz#9cb1ac68e39cb46d61a08e0e2fc12b41d5cd92d6"
+  integrity sha512-8Ej6ggR8n59C0+g0b5KXPHlEfedZ4cjblynrbqWq5S+FmSrXzrDoInoD70QGXEibXYJB2kYQVxAts1iszYKSKg==
   dependencies:
     qs "^6.11.2"
     xcase "^2.0.1"
 
 "@gitbeaker/rest@^39.2.0":
-  version "39.6.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.6.0.tgz#0eba4d5aef8c1a17039ad5954028b2785d4a7d5e"
-  integrity sha512-ENTCms8pnds0IUyl+Ow4m39JlIUM2c7iiQwKJn39EMktCfpoPq5ustrzD1hD2wNbD7HzNUbFeoE5+mMi4mLr0g==
+  version "39.7.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.7.0.tgz#c3d6435ef2557e26081870ad33436ba8dc87cfa0"
+  integrity sha512-+oBoaC4G9h2QEQOL4XrTaz0oLjbajb3KrtbYWidd6Girctx/tlUQ9+Y7eiH3bepoRhAoHW3wpiseCaT7UOvw+w==
   dependencies:
-    "@gitbeaker/core" "^39.6.0"
-    "@gitbeaker/requester-utils" "^39.6.0"
+    "@gitbeaker/core" "^39.7.0"
+    "@gitbeaker/requester-utils" "^39.7.0"
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
