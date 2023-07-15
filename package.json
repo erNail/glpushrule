@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "CLI for managing Gitlab push rules across groups and repositories. Apply sweeping changes with one command.",
   "keywords": ["gitlab", "cli", "push-rules", "gitlab-push-rules", "gitlab-tools", "repository-management"],
-  "repository": "https://github.com/erNail/gitlab-push-rule-manager",
+  "repository": "https://github.com/erNail/glpushrule",
   "author": "Eric Nagel <nagel.eric.95@googlemail.com>",
   "license": "MIT",
   "main": "./dist/src/index.js",
