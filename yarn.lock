@@ -371,30 +371,30 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.46.0.tgz#3f7802972e8b6fe3f88ed1aabc74ec596c456db6"
   integrity sha512-a8TLtmPi8xzPkCbp/OGFUo5yhRkHM2Ko9kOWP4znJr0WAhWyThaw3PnwX4vOTWOAMsV2uRt32PPDcEz63esSaA==
 
-"@gitbeaker/core@^39.10.3":
-  version "39.10.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.10.3.tgz#f246507a46b33f147afba775d267c086c85f3ebf"
-  integrity sha512-B0+j+dFVEVJlgz/EN4xoqqbUGxCDhm2Z4IhVv1JKutFhvJ1QznPUllFpLnWV/Vn51MyQVjtmcbgZiUUtzaiVJQ==
+"@gitbeaker/core@^39.11.0":
+  version "39.11.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.11.0.tgz#485c47150424c9da72fcbf387036a4adede22025"
+  integrity sha512-n5Z6xmufJdwWJlsRq5n8QlYPEP4umFqs4M0RipGjXZhusKJgQH3zHV8E1w+0jVrcfJhsczyewmLbF/2n5EuJQg==
   dependencies:
-    "@gitbeaker/requester-utils" "^39.10.3"
+    "@gitbeaker/requester-utils" "^39.11.0"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^39.10.3":
-  version "39.10.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.10.3.tgz#4bdde17aedb0f4d6507b2d864c19d3716d40ac63"
-  integrity sha512-8/IL+RUeCqLMb3VGGirnYV8COIa+Lupx92JbYdl5tE+QABb+jyXDOwiwWS4YR/MCmLC5rz5aFYFeRVQ+jrRRzA==
+"@gitbeaker/requester-utils@^39.11.0":
+  version "39.11.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.11.0.tgz#1356032d99c1da936e303516aa150dc3ad666c96"
+  integrity sha512-ZkjZM3A321YaiN4aJeIK7oEHYzlkODOAc9ewPCtM5iMtjWl/tt5Cglw8uoaFPPj+66CmshqkV3DzufArSexY5w==
   dependencies:
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/rest@39.10.3":
-  version "39.10.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.10.3.tgz#c854d83c26e0a79eaa3ecb37ef69fbc66e017ea4"
-  integrity sha512-wtLs7hCQ9JnAydrGBbWYSFnsa2raMqBBfOTU7UosKta9Kf1+PXriCcV5yS/2G84v45f9kXN3vyCimxez2br0SQ==
+"@gitbeaker/rest@39.11.0":
+  version "39.11.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.11.0.tgz#7c9ff83afcf0c3f2e79ba60adced5bb90e0eb53d"
+  integrity sha512-u6GwJMcQoEJGre9Wb8PphD88zv3yHq7ZqyJGpInehQn1lR0wvPPunIDN/N2bnecmbQXur/voES6kk1ko797mLQ==
   dependencies:
-    "@gitbeaker/core" "^39.10.3"
-    "@gitbeaker/requester-utils" "^39.10.3"
+    "@gitbeaker/core" "^39.11.0"
+    "@gitbeaker/requester-utils" "^39.11.0"
 
 "@humanwhocodes/config-array@^0.11.10":
   version "0.11.10"
