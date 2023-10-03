@@ -1,4 +1,4 @@
-import { CreateAndEditPushRuleOptions, GroupSchema, GroupStatisticsSchema } from '@gitbeaker/rest';
+import { CreateAndEditPushRuleOptions, GroupSchema } from '@gitbeaker/rest';
 import chalk from 'chalk';
 import logger from '../utils/logger';
 import PushRuleError from '../model/push-rule-error';
@@ -15,7 +15,7 @@ class GroupPushRuleService {
    * @param groups - The groups for which to fetch the push rules.
    * @returns A Promise resolving to an array of voids.
    */
-  async fetchPushRules(groups: (GroupSchema & { statistics: GroupStatisticsSchema })[]): Promise<void[]> {
+  async fetchPushRules(groups: GroupSchema[]): Promise<void[]> {
     this.pushRuleCounter = 0;
     return Promise.all(groups.map(async (group) => this.fetchPushRule(group)));
   }
@@ -26,10 +26,7 @@ class GroupPushRuleService {
    * @param pushRule - The push rule to add.
    * @returns A Promise resolving to an array of voids.
    */
-  async addPushRules(
-    groups: (GroupSchema & { statistics: GroupStatisticsSchema })[],
-    pushRule: CreateAndEditPushRuleOptions
-  ): Promise<void[]> {
+  async addPushRules(groups: GroupSchema[], pushRule: CreateAndEditPushRuleOptions): Promise<void[]> {
     this.pushRuleCounter = 0;
     return Promise.all(groups.map(async (group) => this.addPushRule(group, pushRule)));
   }
@@ -40,10 +37,7 @@ class GroupPushRuleService {
    * @param pushRule - The push rule to edit.
    * @returns A Promise resolving to an array of voids.
    */
-  async editPushRules(
-    groups: (GroupSchema & { statistics: GroupStatisticsSchema })[],
-    pushRule: CreateAndEditPushRuleOptions
-  ): Promise<void[]> {
+  async editPushRules(groups: GroupSchema[], pushRule: CreateAndEditPushRuleOptions): Promise<void[]> {
     this.pushRuleCounter = 0;
     return Promise.all(groups.map(async (group) => this.editPushRule(group, pushRule)));
   }
@@ -53,7 +47,7 @@ class GroupPushRuleService {
    * @param group - The group for which to fetch the push rule.
    * @returns A Promise resolving to void.
    */
-  async fetchPushRule(group: GroupSchema & { statistics: GroupStatisticsSchema }): Promise<void> {
+  async fetchPushRule(group: GroupSchema): Promise<void> {
     try {
       const pushRule = await gitlabApi.GroupPushRules.show(group.id);
       logger.info(`${chalk.bgMagenta(group.full_path)} Group push rule:\n%o`, pushRule);
@@ -72,10 +66,7 @@ class GroupPushRuleService {
    * @param pushRule - The push rule to add.
    * @returns A Promise resolving to void.
    */
-  async addPushRule(
-    group: GroupSchema & { statistics: GroupStatisticsSchema },
-    pushRule: CreateAndEditPushRuleOptions
-  ): Promise<void> {
+  async addPushRule(group: GroupSchema, pushRule: CreateAndEditPushRuleOptions): Promise<void> {
     try {
       const createdPushRule = await gitlabApi.GroupPushRules.create(group.id, pushRule);
       logger.info(`${chalk.bgMagenta(group.full_path)} Group push rule:\n%o`, createdPushRule);
@@ -94,10 +85,7 @@ class GroupPushRuleService {
    * @param pushRule - The push rule to edit.
    * @returns A Promise resolving to void.
    */
-  async editPushRule(
-    group: GroupSchema & { statistics: GroupStatisticsSchema },
-    pushRule: CreateAndEditPushRuleOptions
-  ): Promise<void> {
+  async editPushRule(group: GroupSchema, pushRule: CreateAndEditPushRuleOptions): Promise<void> {
     try {
       const editedPushRule = await gitlabApi.GroupPushRules.edit(group.id, pushRule);
       logger.info(`${chalk.bgMagenta(group.full_path)} Group push rule:\n%o`, editedPushRule);

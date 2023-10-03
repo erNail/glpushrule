@@ -1,4 +1,4 @@
-import { GroupSchema, GroupStatisticsSchema, ProjectSchema } from '@gitbeaker/rest';
+import { GroupSchema, ProjectSchema } from '@gitbeaker/rest';
 import logger from '../utils/logger';
 import gitlabApi from '../utils/gitlab-api';
 
@@ -7,7 +7,7 @@ import gitlabApi from '../utils/gitlab-api';
  * @param matcher - The regular expression to filter the groups by their full path.
  * @returns The array of matched groups.
  */
-export async function fetchGroups(matcher: RegExp): Promise<(GroupSchema & { statistics: GroupStatisticsSchema })[]> {
+export async function fetchGroups(matcher: RegExp): Promise<GroupSchema[]> {
   // Fetches all groups and subgroups
   const groups = await gitlabApi.Groups.all();
   const matchedGroups = groups.filter((group) => matcher.test(group.full_path));
