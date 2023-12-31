@@ -371,30 +371,32 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.50.0.tgz#9e93b850f0f3fa35f5fa59adfd03adae8488e484"
   integrity sha512-NCC3zz2+nvYd+Ckfh87rA47zfu2QsQpvc6k1yzTk+b9KzRj0wkGa8LSoGOXN6Zv4lRf/EIoZ80biDh9HOI+RNQ==
 
-"@gitbeaker/core@^39.18.0":
-  version "39.18.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.18.0.tgz#780c52af9b5c8ecd7ff4d350fd74e00a6400b69b"
-  integrity sha512-K0AadLfGyUscvz5lNuWUpvx1q4pBsDZapEXlHNB6KY7qxYQxQxdBT1c5Kdov3tF81ZkNM5ZYik7mujmXjIB8fw==
+"@gitbeaker/core@^39.28.0":
+  version "39.28.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.28.0.tgz#66da3cf0bfa1d06792194c07ed1c553b7b5a2a61"
+  integrity sha512-5mbDeMnxz/hqIRo60TKMkIvteB2c3yv5kFRKdDVSuhPc/nbdGHEj0EermaMbQFvmvIWg10fSgPnAy3n5k7LHXg==
   dependencies:
-    "@gitbeaker/requester-utils" "^39.18.0"
+    "@gitbeaker/requester-utils" "^39.28.0"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^39.18.0":
-  version "39.18.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.18.0.tgz#6017e0fdf9b1da02234babbd342feb24834de7eb"
-  integrity sha512-88U304JD4bi7ielkyjClgwL/6c5BAfAP3LPNcct8Ae+bBZSiILhN+R9ewGHMVZOAbrfgkN0WITLRGYKkETkghw==
+"@gitbeaker/requester-utils@^39.28.0":
+  version "39.28.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.28.0.tgz#7c563441b9ee3ea57754c6fa00d2e1d04942b029"
+  integrity sha512-PhFSIwx/g45DtyKO9N483Hj8e2PJot3LLLDnQZPpiKyIPJMuO7Qred80wjNAHuxRnQ7PgSgvLpRiFjWmjO3yKQ==
   dependencies:
+    async-sema "^3.1.1"
+    micromatch "^4.0.5"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/rest@39.18.0":
-  version "39.18.0"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.18.0.tgz#2933c06a7be3c2bffcf199f71110a315541b7222"
-  integrity sha512-SK/1W5ZHpikW1jvHqLDVttCpHc1j1qEAS+ALV/eBbpHJ99hl4MXBg/egH757c52kt6/wiewqTLDn19DAjN3AZg==
+"@gitbeaker/rest@39.28.0":
+  version "39.28.0"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.28.0.tgz#507d1ea5d2ef348af90142de6bc98783e342b2fa"
+  integrity sha512-ArT/p2/LKfBMdTu/fH0nCOc7LpDUc+TQ9XwF2HegH95JQy+daZdE4+FIVZ6GYDZX6uExhkskemMDvnP9Mjqblg==
   dependencies:
-    "@gitbeaker/core" "^39.18.0"
-    "@gitbeaker/requester-utils" "^39.18.0"
+    "@gitbeaker/core" "^39.28.0"
+    "@gitbeaker/requester-utils" "^39.28.0"
 
 "@humanwhocodes/config-array@^0.11.11":
   version "0.11.11"
@@ -1772,6 +1774,11 @@ arrify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
   integrity sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==
+
+async-sema@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/async-sema/-/async-sema-3.1.1.tgz#e527c08758a0f8f6f9f15f799a173ff3c40ea808"
+  integrity sha512-tLRNUXati5MFePdAk8dw7Qt7DpxPB60ofAgn8WRhW6a2rcimZnYBP9oxHiv0OHy+Wz7kPMG+t4LGdt31+4EmGg==
 
 async@^3.2.3:
   version "3.2.4"
@@ -4904,7 +4911,7 @@ merge2@^1.3.0, merge2@^1.4.1:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-micromatch@^4.0.0, micromatch@^4.0.2, micromatch@^4.0.4:
+micromatch@^4.0.0, micromatch@^4.0.2, micromatch@^4.0.4, micromatch@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.5.tgz#bc8999a7cbbf77cdc89f132f6e467051b49090c6"
   integrity sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==
