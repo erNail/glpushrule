@@ -50,7 +50,7 @@
     "chalk": "4.1.2",
     "commander": "11.0.0",
     "config": "3.3.11",
-    "dotenv": "16.3.1",
+    "dotenv": "16.4.4",
     "winston": "3.11.0"
   }
 }
