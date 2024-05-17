@@ -401,32 +401,32 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@gitbeaker/core@^39.34.3":
-  version "39.34.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-39.34.3.tgz#94fafc92507f1e17aba2b299bf47e4af7e53f74b"
-  integrity sha512-/3qBXme2MjO38QU2F/MYGon9a4wHKrgtwNzdHHdjpbYJ2/wOGNgbEWSZcibcFkiWVgAjbPXdYqC5sY8hcwGO1w==
+"@gitbeaker/core@^40.0.3":
+  version "40.0.3"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/core/-/core-40.0.3.tgz#27ce6a9778a98673c03d77cd5c79c63727898bd7"
+  integrity sha512-MzeY4oCtoa9zmPIkQIdC2KU8cGmHIXwnAi0L6jjjouqjy6kcA4BydZf8W5Xsj27Rw5iiyhfj8YC1/O3CgrzvCQ==
   dependencies:
-    "@gitbeaker/requester-utils" "^39.34.3"
+    "@gitbeaker/requester-utils" "^40.0.3"
     qs "^6.11.2"
     xcase "^2.0.1"
 
-"@gitbeaker/requester-utils@^39.34.3":
-  version "39.34.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-39.34.3.tgz#a790626123901be9ca5765e5add9e2f9c6185370"
-  integrity sha512-nMnTkTo4UixHPwPYsYIjp8UdKrmSw3TjvRESexliAeNNq4/LVeyVUyRqBUa1ZI8MXt1nPPnPX3wh8s7rqlm7uA==
+"@gitbeaker/requester-utils@^40.0.3":
+  version "40.0.3"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/requester-utils/-/requester-utils-40.0.3.tgz#e30f84d3e1cdb2e21b6f92431cd9d6822de7e545"
+  integrity sha512-L8JpuMIsvXTHfu/2wXzkc5QyfQJSWg4XyEPStHq1ig5SAcbxxqbBoe8ed27eUXLah+PcGrPInMK4cCMxhQm41g==
   dependencies:
     picomatch-browser "^2.2.6"
     qs "^6.11.2"
     rate-limiter-flexible "^4.0.0"
     xcase "^2.0.1"
 
-"@gitbeaker/rest@39.34.3":
-  version "39.34.3"
-  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-39.34.3.tgz#3e3582766e45d5591353e8c4445e345460665ea1"
-  integrity sha512-SuceThS6WhJtqNNcKmW8j0yUU7aXA4k5a29OWcd6bn7peQ3MXlIpbfvLLRnmuUaYUuxHLnUzZhAfuxaNf4DVtQ==
+"@gitbeaker/rest@40.0.3":
+  version "40.0.3"
+  resolved "https://registry.yarnpkg.com/@gitbeaker/rest/-/rest-40.0.3.tgz#12ced15b57bf2774c3349efdcdc78b65f1a4f762"
+  integrity sha512-ihaA0GX3yCo4oUWbISkcjFMIw+WxDAC9L+bEYq2irz4wpv/0EpAU/0jKjggPzY4cGWL9VAyPhew77VeACv4YWw==
   dependencies:
-    "@gitbeaker/core" "^39.34.3"
-    "@gitbeaker/requester-utils" "^39.34.3"
+    "@gitbeaker/core" "^40.0.3"
+    "@gitbeaker/requester-utils" "^40.0.3"
 
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
