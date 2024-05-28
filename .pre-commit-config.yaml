@@ -30,6 +30,6 @@ repos:
     hooks:
       - id: "shfmt"
   - repo: "https://github.com/rhysd/actionlint"
-    rev: "v1.6.25"
+    rev: "v1.7.1"
     hooks:
       - id: "actionlint"
